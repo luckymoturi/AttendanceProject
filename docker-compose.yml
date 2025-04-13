@@ -8,14 +8,6 @@ services:
       - "8000:8000"
     volumes:
       - ./employee_images:/app/employee_images
-    environment:
-      DB_HOST: pgvector-db
-      DB_PORT: 5432
-      DB_USER: postgres
-      DB_PASSWORD: password
-      DB_NAME: face_recognition
-    depends_on:
-      - db
     restart: unless-stopped
 
   db:
